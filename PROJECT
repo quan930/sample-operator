@@ -1,0 +1,19 @@
+domain: lilqcn
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: sample-operator
+repo: github.com/quan930/sample-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: lilqcn
+  group: cache
+  kind: CreateDeployment
+  path: github.com/quan930/sample-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

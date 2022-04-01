@@ -1,0 +1,24 @@
+# permissions for end users to edit createdeployments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: createdeployment-editor-role
+rules:
+- apiGroups:
+  - cache.lilqcn
+  resources:
+  - createdeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.lilqcn
+  resources:
+  - createdeployments/status
+  verbs:
+  - get
