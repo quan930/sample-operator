@@ -2,5 +2,7 @@ apiVersion: cache.lilqcn/v1alpha1
 kind: CreateDeployment
 metadata:
   name: createdeployment-sample
+  namespace: test
 spec:
-  # TODO(user): Add fields here
+  namespace: test
+  name: sample-operator-hello-server2

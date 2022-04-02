@@ -25,11 +25,13 @@ import (
 
 // CreateDeploymentSpec defines the desired state of CreateDeployment
 type CreateDeploymentSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	//deployment's Namespace
+	//+nullable
+	Namespace string `json:"namespace"`
 
-	// Foo is an example field of CreateDeployment. Edit createdeployment_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	//deployment's Name
+	//+nullable
+	Name string `json:"name"`
 }
 
 // CreateDeploymentStatus defines the observed state of CreateDeployment
